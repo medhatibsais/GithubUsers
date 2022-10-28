@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: xcodebuild GithubUsers.xcodeproj -scheme "CurrencyExchanger" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0" -enableCodeCoverage YES test
+          command: xcodebuild GithubUsers.xcodeproj -scheme "GithubUsers" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14,OS=16.0" -enableCodeCoverage YES test
       - store_test_results:
           path: test-results
 
