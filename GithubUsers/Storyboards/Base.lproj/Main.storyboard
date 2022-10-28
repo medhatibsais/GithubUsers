@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rm-WM-8mp">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="UsersListViewController" id="BYZ-38-t0r" customClass="UsersListViewController" customModule="GithubUsers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7hR-w0-AZD">
+                                <rect key="frame" x="0.0" y="91" width="390" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vRe-e7-VHF"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="itr-9d-2Yf">
+                                <rect key="frame" x="0.0" y="147" width="390" height="663"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="itr-9d-2Yf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eh9-su-2OC"/>
+                            <constraint firstItem="7hR-w0-AZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H6e-8p-16C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hR-w0-AZD" secondAttribute="trailing" id="HUh-Wj-Dne"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="itr-9d-2Yf" secondAttribute="trailing" id="Xkt-vV-1xy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="itr-9d-2Yf" secondAttribute="bottom" id="lvD-7f-ADF"/>
+                            <constraint firstItem="itr-9d-2Yf" firstAttribute="top" secondItem="7hR-w0-AZD" secondAttribute="bottom" id="oSm-tb-Hoc"/>
+                            <constraint firstItem="7hR-w0-AZD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ziG-dz-DDp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IJz-ZL-Ak8"/>
+                    <connections>
+                        <outlet property="searchBar" destination="7hR-w0-AZD" id="lD7-C9-cDG"/>
+                        <outlet property="tableView" destination="itr-9d-2Yf" id="2jW-gj-kcr"/>
+                        <outlet property="tableViewBottomConstraint" destination="lvD-7f-ADF" id="9wX-dZ-Yji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.1538461538462" y="-17.061611374407583"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KFS-SN-qTT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0rm-WM-8mp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qEf-kh-aNQ">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y4K-fx-cbz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KB5-Hz-QjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.92307692307691" y="-17.061611374407583"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  GithubUsers
+
+  Created by Medhat Ibsais on 21/10/2022.
+  
+*/
+
+/// Users list view controller
+"usersListViewController.title"                         = "Users List";
+"usersListViewController.searchBar.placeholder"         = "Search for users";
+"usersListViewController.noUsersYet"                    = "No users yet";
+"usersListViewController.search.noResults"              = "No results for %@";
+
+/// User profile view controller
+"userProfileViewController.labels.name.title"           = "Name: ";
+"userProfileViewController.labels.company.title"        = "Company: ";
+"userProfileViewController.labels.blog.title"           = "Blog";
+"userProfileViewController.labels.followers.title"      = "Followers: ";
+"userProfileViewController.labels.following.title"      = "Following: ";
+"userProfileViewController.labels.notes.title"          = "Notes:";
+"userProfileViewController.buttons.save.title"          = "Save";
+
+/// Errors
+"errors.alert.title"                                    = "Error";
+"errors.unknown"                                        = "Something went wrong";
+"errors.dataManager.failedToInitiate"                   = "Launch the app again please to have the possibility of saving your data for offline use";
+
+/// Networking status
+"networkingStatus.offline.title"                        = "Connection Lost";
+"networkingStatus.offline.message"                      = "Your network connect is lost, Don't worry you still can browse users that are already loaded";
+
+/// Alerts
+"alerts.actions.ok.title"                               = "OK";
