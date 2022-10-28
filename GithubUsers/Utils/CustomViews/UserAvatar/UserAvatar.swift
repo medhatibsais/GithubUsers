@@ -16,10 +16,11 @@ class UserAvatar: UIImageView {
     /**
      Setup
      - Parameter url: URL
+     - Parameter tag: Int
      - Parameter isImageInverted: Bool
      - Parameter completion: Completion block
      */
-    func setup(with url: URL, isImageInverted: Bool, completion: @escaping (Result<Data?, Error>) -> Void) {
+    func setup(with url: URL, indexPath: IndexPath, isImageInverted: Bool, completion: @escaping (Result<Data?, Error>) -> Void) {
         
         // Get cached image, or download it if its not cached
         if let cachedImage = self.imageCache.object(forKey: url as AnyObject) as? UIImage {
@@ -39,7 +40,10 @@ class UserAvatar: UIImageView {
         /**
          Download image
          */
-        UsersModel.downloadImage(for: url) { result in
+        UsersModel.downloadImage(for: url) { [indexPath] result in
+            
+            // Check if the tag is equal to the index path row
+            guard indexPath.row == self.tag else { return }
             
             switch result {
             case .success(let data):

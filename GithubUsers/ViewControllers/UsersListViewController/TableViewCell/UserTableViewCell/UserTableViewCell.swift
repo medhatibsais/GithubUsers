@@ -71,11 +71,14 @@ class UserTableViewCell: UITableViewCell {
         // Set index path
         self.indexPath = indexPath
         
+        // Set profile image tag
+        self.userProfileImage.tag = indexPath.row
+        
         // Get URL
         if let url = URL(string: representable.imageURL) {
             
             // Setup profile image
-            self.userProfileImage.setup(with: url, isImageInverted: representable.isImageInverted) { result in
+            self.userProfileImage.setup(with: url, indexPath: indexPath, isImageInverted: representable.isImageInverted) { result in
                 
                 switch result {
                 case .success(let data):
