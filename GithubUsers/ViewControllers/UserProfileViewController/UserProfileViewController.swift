@@ -11,7 +11,7 @@ import SwiftUI
 struct UserProfileViewController: View {
     
     /// Network model
-    @EnvironmentObject var networkModel: ProfileNetworkModel
+    @State var networkModel: ProfileNetworkModel
     
     /// Body
     var body: some View {

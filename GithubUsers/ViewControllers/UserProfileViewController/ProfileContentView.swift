@@ -16,7 +16,7 @@ struct ProfileContentView: View {
     /// Body
     var body: some View {
         
-        // Crate user profile view controller with profile network model environment object
-        UserProfileViewController().environmentObject(ProfileNetworkModel(user: self.user))
+        // Crate user profile view controller with profile network model
+        UserProfileViewController(networkModel: ProfileNetworkModel(user: self.user))
     }
 }
