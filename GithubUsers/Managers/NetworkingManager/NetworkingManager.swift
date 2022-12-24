@@ -33,9 +33,8 @@ class NetworkingManager {
      Initializer
      */
     private init() {
+
         
-        // Set max operations 1 at a time
-        self.operationQueue.maxConcurrentOperationCount = 1
     }
     
     /**
